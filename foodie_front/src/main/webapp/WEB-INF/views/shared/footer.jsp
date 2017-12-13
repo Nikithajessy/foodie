@@ -4,11 +4,11 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright @2017 <a href="http://maxoffsky.com/">Nikitha</a>
-                    </p>
+                 <p>Copyright &copy; foodie 2017 - Designed and Developed By  Nikitha</p>
+                
                 </div>
             </div>
         </footer>
 
     </div>
-    <!-- /.container -->
+   
