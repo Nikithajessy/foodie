@@ -29,7 +29,8 @@ public class ProductTestCase {
 		context.refresh();
 		productDAO = (ProductDAO)context.getBean("productDAO");
 	}
-		/*
+	/*
+		
 	@Test
 	public void testCRUDProduct() {
 		

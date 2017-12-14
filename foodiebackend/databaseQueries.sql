@@ -26,22 +26,16 @@ CREATE TABLE user_detail (
 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Niki', 'Ammu', 'ADMIN', true, '$2a$06$ORtBskA2g5Wg0HDgRE5ZsOQNDHUZSdpJqJ2.PGXv0mKyEvLnKP7SW', 'na@gmail.com', '8888888888');
+VALUES ('Niki', 'Ammu', 'ADMIN', true, '$2y$10$Yf5gqAtEPp1UfmmbZGcEJ.hJ4hGDab5HJ71TSlGdbI/iiRP2zkm4.', 'na@gmail.com', '8888888888');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Archana', 'Achu', 'SUPPLIER', true, '$2a$06$bzYMivkRjSxTK2LPD8W4te6jjJa795OwJR1Of5n95myFsu3hgUnm6', 'aa@gmail.com', '9999999999');
+VALUES ('Archana', 'Achu', 'SUPPLIER', true, '$2b$10$cPfSoT3jkGLmTfZbO.yHpugw1Z2D9r99DIql/cUOZ0YAp2oTlQBHK', 'aa@gmail.com', '9999999999');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Jessy', 'Aro', 'SUPPLIER', true, '$2a$06$i1dLNlXj2uY.UBIb9kUcAOxCigGHUZRKBtpRlmNtL5xtgD6bcVNOK', 'ja@gmail.com', '7777777777');
+VALUES ('Jessy', 'Aro', 'SUPPLIER', true, '$2b$10$TvZPwFSHfts9JRGW0.khwOvL0hdAFYxWMjFy.EYUNAfHNNo4YJkuq', 'ja@gmail.com', '7777777777');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('sneha', 'Anto', 'USER', true, '$2a$06$4mvvyO0h7vnUiKV57IW3oudNEaKPpH1xVSdbie1k6Ni2jfjwwminq', 'sa@gmail.com', '7777777777');
-INSERT INTO user_detail 
-(first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('NIKITHA', 'ARO', 'ADMIN', true, '$5Np', 'nikiaro@gmail.com', '7777777777');
-INSERT INTO user_detail 
-(first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('NIKI', 'ARO', 'ADMIN', true, 'admin', 'niaro@gmail.com', '7777777777');
+VALUES ('sneha', 'Anto', 'USER', true, '$2b$10$2Ql2SYHon/EJbrKLvtIzXOZsfWAScjE247QE1oud5VCeRWCS3xpqu', 'sa@gmail.com', '7777777777');
 
 
 
