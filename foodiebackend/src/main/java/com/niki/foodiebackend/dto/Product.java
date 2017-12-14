@@ -2,6 +2,8 @@
 
 
 
+
+
 import java.io.Serializable;
 import java.util.UUID;
 
@@ -23,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	
 	// private fields
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

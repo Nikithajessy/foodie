@@ -23,20 +23,33 @@ CREATE TABLE user_detail (
 	contact_number VARCHAR(15),	
 	CONSTRAINT pk_user_id PRIMARY KEY(id)
 );
+
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Niki', 'Ammu', 'ADMIN', true, 'admin', 'na@gmail.com', '8888888888');
+VALUES ('Niki', 'Ammu', 'ADMIN', true, '$2a$06$ORtBskA2g5Wg0HDgRE5ZsOQNDHUZSdpJqJ2.PGXv0mKyEvLnKP7SW', 'na@gmail.com', '8888888888');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Ravindra', 'Raj', 'SUPPLIER', true, '12345', 'rj@gmail.com', '9999999999');
+VALUES ('Archana', 'Achu', 'SUPPLIER', true, '$2a$06$bzYMivkRjSxTK2LPD8W4te6jjJa795OwJR1Of5n95myFsu3hgUnm6', 'aa@gmail.com', '9999999999');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Jessy', 'Aro', 'SUPPLIER', true, '123', 'ja@gmail.com', '7777777777');
+VALUES ('Jessy', 'Aro', 'SUPPLIER', true, '$2a$06$i1dLNlXj2uY.UBIb9kUcAOxCigGHUZRKBtpRlmNtL5xtgD6bcVNOK', 'ja@gmail.com', '7777777777');
+INSERT INTO user_detail 
+(first_name, last_name, role, enabled, password, email, contact_number) 
+VALUES ('sneha', 'Anto', 'USER', true, '$2a$06$4mvvyO0h7vnUiKV57IW3oudNEaKPpH1xVSdbie1k6Ni2jfjwwminq', 'sa@gmail.com', '7777777777');
+INSERT INTO user_detail 
+(first_name, last_name, role, enabled, password, email, contact_number) 
+VALUES ('NIKITHA', 'ARO', 'ADMIN', true, '$5Np', 'nikiaro@gmail.com', '7777777777');
+INSERT INTO user_detail 
+(first_name, last_name, role, enabled, password, email, contact_number) 
+VALUES ('NIKI', 'ARO', 'ADMIN', true, 'admin', 'niaro@gmail.com', '7777777777');
+
+
 
 CREATE TABLE product (
 	id IDENTITY,
 	code VARCHAR(20),
 	name VARCHAR(50),
+	brand VARCHAR(50),
 	description VARCHAR(255),
 	unit_price DECIMAL(10,2),
 	quantity INT,
@@ -49,13 +62,86 @@ CREATE TABLE product (
  	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
 	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id),	
 );	
-INSERT INTO product (code, name, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDABC123DEFX', 'Veg pizza', 'This is one of the best pizza with veg topings', 200, 5, true, 1, 2, 0, 0 );
-INSERT INTO product (code, name, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDDEF123DEFX', 'chicken pizza', 'This is one of the best pizza with chicken topings', 350, 2, true, 1, 3, 0, 0 );
-INSERT INTO product (code, name, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDPQR123WGTX', 'veg burger','This is one of the best veg burger', 120, 5, true, 2, 2, 0, 0 );
-INSERT INTO product (code, name, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDMNO123PQRX', 'chicken burger','This is one of the best chicken burger', 159, 3, true, 2, 2, 0, 0 );
-INSERT INTO product (code, name, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDABCXYZDEFX', 'cheese sandwich','This is one of the best sandwich with more and more cheese', 56, 5, true,3, 3, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRDABC123DEFX', 'Veg pizza','pizza hut', 'This is one of the best pizza with veg topings', 200, 5, true, 1, 2, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRDDEF123DEFX', 'chicken pizza','dominos', 'This is one of the best pizza with chicken topings', 350, 2, true, 1, 3, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRDPQR123WGTX', 'veg burger','mcd','This is one of the best veg burger', 120, 5, true, 2, 2, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRDMNO123PQRX', 'chicken burger','mcd','This is one of the best chicken burger', 159, 3, true, 2, 2, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRDABCXYZDEFX', 'cheese sandwich','me','This is one of the best sandwich with more and more cheese', 56, 5, true,3, 3, 0, 0 );
+
+-- the address table to store the user billing and shipping addresses
+CREATE TABLE address (
+	id IDENTITY,
+	user_id int,
+	address_line_one VARCHAR(100),
+	address_line_two VARCHAR(100),
+	city VARCHAR(20),
+	state VARCHAR(20),
+	country VARCHAR(20),
+	postal_code VARCHAR(10),
+	is_billing BOOLEAN,
+	is_shipping BOOLEAN,
+	CONSTRAINT fk_address_user_id FOREIGN KEY (user_id ) REFERENCES user_detail (id),
+	CONSTRAINT pk_address_id PRIMARY KEY (id)
+);
+INSERT INTO address( user_id, address_line_one, address_line_two, city, state, country, postal_code, is_billing, is_shipping) 
+VALUES (4, '102 Sabarmati Society, Mahatma Gandhi Road', 'Near Salt Lake, Gandhi Nagar', 'Chennai', 'Tamilnadu', 'India', '600031', true, false );
+-- the cart table to store the user cart top-level details
+CREATE TABLE cart (
+	id IDENTITY,
+	user_id int,
+	grand_total DECIMAL(10,2),
+	cart_lines int,
+	CONSTRAINT fk_cart_user_id FOREIGN KEY (user_id ) REFERENCES user_detail (id),
+	CONSTRAINT pk_cart_id PRIMARY KEY (id)
+);
+INSERT INTO cart (user_id, grand_total, cart_lines) VALUES (4, 0, 0);
+
+-- the cart line table to store the cart details
+
+CREATE TABLE cart_line (
+	id IDENTITY,
+	cart_id int,
+	total DECIMAL(10,2),
+	product_id int,
+	product_count int,
+	buying_price DECIMAL(10,2),
+	is_available boolean,
+	CONSTRAINT fk_cartline_product_id FOREIGN KEY (product_id ) REFERENCES product (id),
+	CONSTRAINT pk_cartline_id PRIMARY KEY (id)
+);
+
+
+-- the order detail table to store the order
+
+CREATE TABLE order_detail (
+	id IDENTITY,
+	user_id int,
+	order_total DECIMAL(10,2),
+	order_count int,
+	shipping_id int,
+	billing_id int,
+	order_date date,
+	CONSTRAINT fk_order_detail_user_id FOREIGN KEY (user_id) REFERENCES user_detail (id),
+	CONSTRAINT fk_order_detail_shipping_id FOREIGN KEY (shipping_id) REFERENCES address (id),
+	CONSTRAINT fk_order_detail_billing_id FOREIGN KEY (billing_id) REFERENCES address (id),
+	CONSTRAINT pk_order_detail_id PRIMARY KEY (id)
+);
+
+-- the order item table to store order items
+
+CREATE TABLE order_item (
+	id IDENTITY,
+	order_id int,
+	total DECIMAL(10,2),
+	product_id int,
+	product_count int,
+	buying_price DECIMAL(10,2),
+	CONSTRAINT fk_order_item_product_id FOREIGN KEY (product_id) REFERENCES product (id),
+	CONSTRAINT fk_order_item_order_id FOREIGN KEY (order_id) REFERENCES order_detail (id),
+	CONSTRAINT pk_order_item_id PRIMARY KEY (id)
+);

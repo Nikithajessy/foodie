@@ -11,6 +11,7 @@ import com.niki.foodiebackend.dao.ProductDAO;
 import com.niki.foodiebackend.dao.UserDAO;
 import com.niki.foodiebackend.dto.Cart;
 import com.niki.foodiebackend.dto.CartLine;
+import com.niki.foodiebackend.dto.Product;
 import com.niki.foodiebackend.dto.User;
 
 public class CartLineTestCase {
@@ -38,7 +39,7 @@ public class CartLineTestCase {
 		userDAO = (UserDAO)context.getBean("userDAO");
 	}
 	
-/*	
+/*
 	@Test
 	public void testAddCartLine() {
 		

@@ -54,7 +54,7 @@
 	        <div class="container">
 	            <!-- Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
-	                <a class="navbar-brand" href="${contextRoot}/home">Online Shopping</a>
+	                <a class="navbar-brand" href="${contextRoot}/home">FOODIE</a>
 	            </div>
 			</div>
 		</nav>		
@@ -134,9 +134,7 @@
 		</div>
 
 
-		<!-- Footer comes here -->
-		<%@include file="./shared/footer.jsp"%>
-
+		
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
 
@@ -147,6 +145,10 @@
 		
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
+
+
+		<!-- Footer comes here -->
+		<%@include file="./shared/footer.jsp"%>
 
 	</div>
 

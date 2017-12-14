@@ -1,6 +1,7 @@
 package com.niki.foodiebackend.test;
 
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.niki.foodiebackend.dao.UserDAO;
@@ -79,7 +80,6 @@ public class UserTestCase {
 	}
 	
 	*/
-
 	// working for uni-directional
 /*
 	@Test

@@ -26,8 +26,8 @@ public class categoryTestCase {
 		categoryDAO = (categoryDAO)context.getBean("categoryDAO");
 			
 	}
-	
-	/* @Test
+	/*
+	 @Test
 	public void testAddcategory() {
 		
 		category = new category();
@@ -39,8 +39,8 @@ public class categoryTestCase {
 		assertEquals("successfully added a category inside the table",true,categoryDAO.add(category));
 	}
 	*/
-	
-	/* @Test
+	/*
+	 @Test
 	public void testGetCategory() {
 		
 		category = categoryDAO.get(1);
@@ -51,8 +51,8 @@ public class categoryTestCase {
 		
 	}
 	*/
-	
-/*	@Test
+	/*
+	@Test
 	public void testUpdateCategory() {
 		
 		category = categoryDAO.get(1);
@@ -62,10 +62,9 @@ public class categoryTestCase {
 		assertEquals("Successfully updated a single category in the table!",true,categoryDAO.update(category));
 		
 		
-	}
-	*/
-	
-	/*@Test
+	} */
+	/*
+	@Test
 	public void testDeleteCategory() {
 		
 		category = categoryDAO.get(1);		
@@ -74,7 +73,8 @@ public class categoryTestCase {
 		
 	}
 	*/
-/*	@Test
+		
+	/* @Test
 	public void testListCategory() {
 					
 		assertEquals("Successfully fetched the list of categories from the table!",0,categoryDAO.list().size());
@@ -82,6 +82,7 @@ public class categoryTestCase {
 		
 	}
 	*/
+		
 	@Test
 	public void testCRUDCategory() {
 		
@@ -120,7 +121,7 @@ public class categoryTestCase {
 		assertEquals("Successfully fetched the list of categories from the table!",1,categoryDAO.list().size());		
 				
 		
-	}
+	} 
 	
 	
 }
