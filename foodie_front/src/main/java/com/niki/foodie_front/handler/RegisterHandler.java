@@ -3,8 +3,9 @@ package com.niki.foodie_front.handler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+
 
 import com.niki.foodie_front.model.RegisterModel;
 import com.niki.foodiebackend.dao.UserDAO;
@@ -17,7 +18,7 @@ public class RegisterHandler {
 
 
  @Autowired
- private BCryptPasswordEncoder passwordEncoder;
+ private PasswordEncoder passwordEncoder;
 	
 	
  @Autowired
