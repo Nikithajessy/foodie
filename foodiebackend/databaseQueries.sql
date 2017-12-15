@@ -37,6 +37,14 @@ INSERT INTO user_detail
 (first_name, last_name, role, enabled, password, email, contact_number) 
 VALUES ('sneha', 'Anto', 'USER', true, '$2b$10$2Ql2SYHon/EJbrKLvtIzXOZsfWAScjE247QE1oud5VCeRWCS3xpqu', 'sa@gmail.com', '7777777777');
 
+INSERT INTO user_detail 
+(first_name, last_name, role, enabled, password, email, contact_number) 
+VALUES ('nik', 'Aro', 'ADMIN', true, '$2y$10$GLuEBb4862/ewbwS806vEe8cEJF3RJYcTsFwT2lW7Tm8KawjtA0fK', 'np@gmail.com', '8888888888');
+
+INSERT INTO user_detail 
+(first_name, last_name, role, enabled, password, email, contact_number) 
+VALUES ('aro', 'nithin', 'ADMIN', true, '$2a$04$DA35FFO0kJ1Ipbs/Uj10/uiJtasNBAHBJTEr9xZyZT.rq2SR8rCXm', 'ani@gmail.com', '8888888888');
+
 
 
 CREATE TABLE product (
