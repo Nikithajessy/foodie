@@ -10,6 +10,7 @@ CREATE TABLE category (
 INSERT INTO category (name, description,image_url,is_active) VALUES ('PIZZA', 'This is PIZZA!', 'CAT_1.png', true);
 INSERT INTO category (name, description,image_url,is_active) VALUES ('BURGER', 'This is BURGER!', 'CAT_2.png', true);
 INSERT INTO category (name, description,image_url,is_active) VALUES ('SANDWICH', 'This is SANDWICH!', 'CAT_3.png', true);
+INSERT INTO category (name, description,image_url,is_active) VALUES ('BBQ', 'This is BBQ!', 'CAT_4.png', true);
 
 
 CREATE TABLE user_detail (
@@ -74,6 +75,13 @@ INSERT INTO product (code, name, brand, description, unit_price, quantity, is_ac
 VALUES ('PRDMNO123PQRX', 'chicken burger','mcd','This is one of the best chicken burger', 159, 3, true, 2, 2, 0, 0 );
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
 VALUES ('PRDABCXYZDEFX', 'cheese sandwich','me','This is one of the best sandwich with more and more cheese', 56, 5, true,3, 3, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRD119BC35DEA', 'panner pizza','pizza hut', 'This is one of the best pizza with panner topings', 250, 5, true, 1, 2, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRDE4FBF6C6D1', 'Veg bbq','bbq', 'This is one of the best bbq ', 250, 5, true, 4, 2, 0, 0 );
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
+VALUES ('PRD82E3B5DC60', 'chicken bbq','coal bbq', 'This is one of the best chicken bbq', 250, 5, true, 4, 2, 0, 0 );
+
 
 -- the address table to store the user billing and shipping addresses
 CREATE TABLE address (
