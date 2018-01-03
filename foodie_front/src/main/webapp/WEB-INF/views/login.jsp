@@ -141,6 +141,8 @@
 
 		</div>
 
+		<!-- Footer comes here -->
+		<%@include file="./shared/footer.jsp"%>
 
 
 		<!-- jQuery -->
@@ -155,8 +157,6 @@
 		<script src="${js}/myapp.js"></script>
 
 
-		<!-- Footer comes here -->
-		<%@include file="./shared/footer.jsp"%>
 
 	</div>
 
